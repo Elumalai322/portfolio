@@ -1,0 +1,243 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- Linking to the local static CSS file -->
+    <link rel="stylesheet" href="{% static 'css/index.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+
+<body>
+
+    <!-- Vertical Navbar -->
+    <div class="vertical-navbar">
+        <a href="#home">
+            <span><i class="fa fa-home"></i><span class="text">Home</span></span>
+        </a>
+        <a href="#about">
+            <span><i class="fa fa-user"></i><span class="text">About</span></span>
+        </a>
+        <a href="#skills">
+            <span><i class="fa fa-cogs"></i><span class="text">Skills</span></span>
+        </a>
+        <a href="#portfolio">
+            <span><i class="fa fa-briefcase"></i><span class="text">Portfolio</span></span>
+        </a>
+        <a href="#contact">
+            <span><i class="fa fa-envelope"></i><span class="text">Contact</span></span>
+        </a>
+    </div>
+
+    <!-- Content Container -->
+    <div class="content">
+        <section id="home">
+            <h1>Elumalai.M</h1>
+            <p>Front End Developer</p>
+        </section>
+
+        <section id="about">
+            <img src="{% static 'images/No 1.jpg' %}" alt="Elumalai" />
+            <div class="content-text">
+                <h2>About Me</h2>
+                <br>
+                <p>Enthusiastic and self-motivated professional with a strong work ethic
+                    and reliability. Proven ability to adapt to challenging situations as a
+                    mature team player while also excelling in independent roles.
+                    Demonstrates the capability to perform well under pressure and
+                    consistently meet strict deadlines. </p>
+                <br>
+                <br>
+                <h3>Front End Developer</h3>
+
+                <div class="info-container">
+                    <div class="info-left">
+                        <div class="info-line">
+                            <h4>Birthday:</h4><p>02/06/2004</p>
+                        </div>
+                        <div class="info-line">
+                            <h4>Website:</h4><p>www.example.com</p>
+                        </div>
+                        <div class="info-line">
+                            <h4>Phone:</h4><p>93447651678</p>
+                        </div>
+                        <div class="info-line">
+                            <h4>City:</h4><p>Namakkal-638007</p>
+                        </div>
+                    </div>
+
+                    <div class="info-right">
+                        <div class="info-line">
+                            <h4>Age:</h4><p>21</p>
+                        </div>
+                        <div class="info-line">
+                            <h4>Degree:</h4><p>Bachelor's in Computer Science</p>
+                        </div>
+                        <div class="info-line">
+                            <h4>Email:</h4><p>example@example.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+
+            <div class="skill">
+                <h3>HTML</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 90%"></div>
+                    <div class="progress-text">90%</div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <h3>CSS</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%"></div>
+                    <div class="progress-text">85%</div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <h3>JavaScript</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%"></div>
+                    <div class="progress-text">80%</div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <h3>React JS</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 75%"></div>
+                    <div class="progress-text">75%</div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <h3>Angular JS</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 70%"></div>
+                    <div class="progress-text">70%</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <h2>My Portfolio</h2>
+
+            <div class="portfolio-container">
+                <div class="portfolio-item">
+                    <img src="{% static 'images/download.jpg' %}" alt="Project 1">
+                    <div class="portfolio-content">
+                        <h3>Project 1</h3>
+                        <h4>Portfolio</h4>
+                        <p>This portfolio showcases my work as a Front-End Developer, where I blend creativity and technical skills to build responsive and engaging websites. My projects highlight proficiency in HTML, CSS, JavaScript, React, and Node.js. Each project demonstrates my ability to create clean, user-friendly interfaces while ensuring optimal performance. I strive to bring innovation and attention to detail to every aspect of my work. With a focus on both aesthetics and functionality, I am passionate about crafting seamless digital experiences. Feel free to explore and connect with me for future opportunities.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="{% static 'images/2rdbg.jpg' %}" alt="Project 2">
+                    <div class="portfolio-content">
+                        <h3>project</h3>
+                        <h4>Weather App
+                        </h4>
+                        <p> 
+                            This is a responsive weather forecasting web application built using React.js.
+                            It fetches real-time weather data using the OpenWeatherMap API.
+                            Users can search for any city worldwide and view updated weather conditions.
+                            The app displays temperature, humidity, wind speed, and weather icons.
+                            It also shows the latitude and longitude of the searched location.
+                            Icons dynamically change based on weather conditions using custom image assets.
+                            The app handles loading states and invalid city names gracefully.
+                            This project showcases my skills in API integration, state management, and responsive UI design.
+                            
+                            </p>
+                    </div>
+                </div>
+                
+        </section>
+
+        <!-- Email Validation in Contact Section -->
+         
+       <section id="contact">
+        <h2>Contact</h2><br>
+
+        <form id="contact-form" method="post">
+            {% csrf_token %}
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <script>
+            function getCookie(name) {
+                let cookieValue = null;
+                if (document.cookie && document.cookie !== '') {
+                    const cookies = document.cookie.split(';');
+                    for (let i = 0; i < cookies.length; i++) {
+                        const cookie = cookies[i].trim();
+                        if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                            break;
+                        }
+                    }
+                }
+                return cookieValue;
+            }
+
+            const csrftoken = getCookie('csrftoken');
+
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                let formData = new FormData(this);
+
+                fetch("{% url 'contact' %}", {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'X-CSRFToken': csrftoken
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.message) {
+                        alert("✅ " + data.message);
+                        document.getElementById('contact-form').reset();
+                    } else {
+                        alert("❌ " + data.error);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert("❌ Something went wrong. Please try again.");
+                });
+            });
+        </script>
+  <section id="contact">
+    <h2>Links</h2>
+    <p>Email: elumalaimurugan75@gmail.com</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/elumalaimurugan75" target="_blank">www.linkedin.com/in/elumalaimurugan75</a></p>
+    <p>GitHub: <a href="https://github.com/elumalaimurugan75" target="_blank">https://github.com/Elumalai322</a></p>
+</section>
+
+
+</body>

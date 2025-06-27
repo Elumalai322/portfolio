@@ -1,0 +1,540 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    background-color: #cfcccc;
+    scroll-behavior: smooth;
+}
+#home {
+    /* Update the path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Adjust text color for visibility */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.content{
+    background-image: url("{% static 'images/cloud.jpg' %}");
+}
+
+
+#home {
+    background-image: url("{% static 'images/cloud.jpg' %}");
+    background-size: cover;
+    background-position: center;
+    color: rgb(25, 20, 20);
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Apply a semi-transparent overlay to the background */
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: -1;
+}
+
+#home h1 {
+    font-size: 80px;
+    text-align: center;
+    margin-top: -20px;
+    color: #756b6b;
+}
+#home p{
+    color: rgb(132, 127, 127);
+}
+
+#home h3 {
+    text-align: center;
+    margin-top: -100px;
+}
+
+/* Fixed vertical navbar */
+.vertical-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 150px;
+    background-color: rgb(96, 93, 93);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    z-index: 10;
+}
+
+.vertical-navbar a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.vertical-navbar span {
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.vertical-navbar span i {
+    color: white;
+    font-size: 20px;
+}
+
+/* Initially hide the text */
+.vertical-navbar span .text {
+    display: none;
+    position: absolute;
+    left: 60px;
+    white-space: nowrap;
+    background-color: transparent;
+    color: white;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Show text on hover */
+.vertical-navbar a:hover .text {
+    display: inline-block;
+    margin-bottom: -13px;
+    margin-left: -20px;
+}
+
+/* Change background color on hover */
+.vertical-navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    height: auto;
+}
+
+/* Content container */
+.content {
+    margin-left: 150px;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Section Styling */
+section {
+    padding: 80px 20px;
+    min-height: 500px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Sections */
+#home {
+    background-color: #f0f1f5;
+    color: white;
+}
+
+#about {
+    background-color: #e8dfdf;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 0 60px;
+}
+
+#about img {
+    width: 395px;
+    height: 80%;
+    border-radius: 5%;
+    margin-right: 40px;
+    margin-top: 50px;
+    
+}
+#about img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#about img:hover {
+    transform: scale(1.05);
+}
+
+
+#about .content-text {
+    max-width: 600px;
+    text-align: left;
+    margin-top: 100px;
+}
+
+/* New container for information sections */
+#about .info-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#about .info-container .info-left,
+#about .info-container .info-right {
+    width: 45%;
+}
+
+/* Styling for individual info items */
+.info-line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.info-line h4 {
+    margin-right: 10px;
+    font-weight: normal;
+}
+
+.info-line p {
+    margin: 0;
+}
+
+#skills {
+    background-color: #e4e9eb;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+
+#portfolio {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Portfolio Section Styling */
+#portfolio {
+    background-color: #fff;
+    color: #333;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.portfolio-item {
+    position: relative;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.portfolio-item .portfolio-content {
+    padding: 15px;
+}
+
+.portfolio-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.portfolio-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+    .portfolio-container {
+        grid-template-columns: 1fr; /* Single column layout for mobile */
+    }
+}
+
+#contact {
+    background-color: #eff3f5;
+    color: rgb(106, 94, 94);
+    padding: 40px 20px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form .submit-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: #06bebb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form .submit-btn:hover {
+    background-color: #04a9a2;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin: 10px 0;
+    height: 30px;
+    position: relative;
+}
+
+.progress {
+    background-color: #4caf50; /* Green for filled progress */
+    height: 100%;
+    width: 0; /* Dynamically set with inline style */
+    border-radius: 10px;
+    transition: width 1s ease-in-out; /* Smooth transition when width changes */
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.skill {
+    margin-bottom: 30px;
+}
+
+.skill h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.portfolio-item .portfolio-content p {
+    padding: 10px; /* Adjust the padding as needed */
+    color: #555;
+    font-size: 1rem;
+}/* Styling for Contact Form */
+#email-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#email-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#email-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#email-form input[type="email"]:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+#email-form button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+#email-form button:hover {
+    background-color: #2980b9;
+}
+
+/* Error Message Styling */
+.error-message {
+    font-size: 14px;
+    color: #585555;
+    display: none;
+    margin-top: 5px;
+}
+/* Contact Section Styling */
+#contact {
+    background-color: #ffffff;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 40px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+#contact h2 {
+    text-align: center;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #444;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    resize: vertical;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 600px) {
+    #contact {
+        padding: 20px;
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+    }
+}
+#contact table {
+    width: 100%;
+    border-spacing: 2rem;
+}
+
+#contact td, #contact th {
+    vertical-align: top;
+    padding: 1rem;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+#contactt {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  color: #000; /* optional: black text for contrast */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* optional: light shadow for depth */
+}
+#contactt a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#contactt a:hover {
+  text-decoration: underline;
+}
+#contactt {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: light shadow */
+  color: #000; /* optional: text color black */
+}
